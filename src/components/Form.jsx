@@ -35,6 +35,7 @@ const Form = () => {
             <div className="mt-[41px] grid grid-cols-2 gap-[14px]">
               <input
                 {...register("lastname", {
+                  required: "required!",
                   validate: (value) => {
                     if (value.charAt(0) !== value.charAt(0).toUpperCase()) {
                       return "Lastname Doesnt start with Uppercase!";
@@ -48,6 +49,7 @@ const Form = () => {
               />
               <input
                 {...register("firstname", {
+                  required: "required!",
                   validate: (value) => {
                     if (value.charAt(0) !== value.charAt(0).toUpperCase()) {
                       return "Firstname Doesnt start with Uppercase!";
@@ -61,6 +63,7 @@ const Form = () => {
               />
               <input
                 {...register("email", {
+                  required: "required!",
                   validate: (value) => {
                     if (!emailRegex.test(value)) {
                       return "Invalid Gmail address!";
@@ -74,6 +77,7 @@ const Form = () => {
               />
               <input
                 {...register("phonenumber", {
+                  required: "required!",
                   validate: (value) => {
                     if (!phoneRegex.test(value)) {
                       return "Invalid phone number!";
@@ -88,6 +92,7 @@ const Form = () => {
               />
               <textarea
                 {...register("textarea", {
+                  required: "required!",
                   maxLength: {
                     value: 100,
                     message: "Max Length 100!",
