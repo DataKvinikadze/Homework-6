@@ -5,7 +5,7 @@ import Form from "./components/Form";
 function App() {
   return (
     <>
-      <div className="bg-[#0A0D17] h-[100vh]">
+      <div className="bg-[#0A0D17]">
         <Header />
         <Form />
       </div>
