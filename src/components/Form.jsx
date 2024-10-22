@@ -3,6 +3,8 @@ import FormImage from "../assets/FormImage.svg";
 import { useForm } from "react-hook-form";
 
 const Form = () => {
+  const { register } = useForm();
+
   return (
     <div className="max-w-[1440px] w-full flex justify-center mx-auto pb-[104px]">
       <div className="max-w-[1256px] w-full flex justify-center items-center text-[#FFFFFF] pr-[184px] gap-x-[30px] border-[2px] rounded-[20px] bg-[#FFFFFF] bg-opacity-5 backdrop-blur-[380px] py-[20px] border-[#0A0D17] backdrop:blur-md">
@@ -16,26 +18,31 @@ const Form = () => {
           </p>
           <div className="mt-[41px] grid grid-cols-2 gap-[14px]">
             <input
+              {...register("lastname")}
               className="col-start-1 row-start-1 px-[14px] py-[12px] rounded-[5px] bg-[#ffffff] bg-opacity-5 text-[#FFFFFF] border-[#FFFFFF] border-opacity-20 border-[1px]"
               type="text"
               placeholder="Last Name"
             />
             <input
+              {...register("firstname")}
               className="col-start-2 row-start-1 px-[14px] py-[12px] rounded-[5px] bg-[#ffffff] bg-opacity-5 text-[#FFFFFF] border-[#FFFFFF] border-opacity-20 border-[1px]"
               type="text"
               placeholder="First Name"
             />
             <input
+              {...register("email")}
               className="row-start-2 col-span-2 px-[14px] py-[12px] rounded-[5px] bg-[#ffffff] bg-opacity-5 text-[#FFFFFF] border-[#FFFFFF] border-opacity-20 border-[1px]"
               type="text"
               placeholder="Email"
             />
             <input
+              {...register("phonenumber")}
               className="row-start-3 col-span-2 px-[14px] py-[12px] rounded-[5px] bg-[#ffffff] bg-opacity-5 text-[#FFFFFF] border-[#FFFFFF] border-opacity-20 border-[1px]"
               type="text"
               placeholder="Phone Number"
             />
             <textarea
+              {...register("textarea")}
               className="max-h-[109px] row-start-4 col-span-2 h-[109px] px-[14px] py-[12px] rounded-[5px] bg-[#ffffff] bg-opacity-5 text-[#FFFFFF] border-[#FFFFFF] border-opacity-20 border-[1px]"
               type="text"
               placeholder="Message"
