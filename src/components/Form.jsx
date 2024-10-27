@@ -7,6 +7,7 @@ const Form = () => {
     mode: "onSubmit",
   });
 
+  //S
   const onSubmit = () => {
     console.log("Form has been Submited");
   };
